@@ -42,7 +42,7 @@ Please feel free to use a different markup language if you do not plan to run
 * As a user I want to be able to add images to listings, so that I can show off my place (done)
 * As a user I want to be able to click 'edit account', so that I can cancel my account (done)
 * As a user I want to be able to search listings, so that I can find a place to stay
-
+* NOTIFICATIONS
 
 * As a user I want to be able to visit a listing page, so that I can leave feedback
 * As a user I want to be able to visit other people's profile pages, so that I can leave feedback

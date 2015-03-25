@@ -16,3 +16,21 @@
 
 @import "bootswatch/cosmo/variables";
 @import "bootstrap";
+
+body {
+  background-color: #FFD1AA;
+}
+
+#listings-display {
+
+  figure {
+    width: 300px;
+    height: 300px;
+    display: inline-table;
+    margin: 20px;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}

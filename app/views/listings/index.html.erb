@@ -1,8 +1,8 @@
-<ul class="list-unstyled">
+<div id="listings-display">
   <% @listings.each do |listing| %>
-    <li>
-      <%= image_tag listing.photo.url(:thumb) %>
-      <%= link_to listing.title, listing_path(listing) %>
-    </li>
+    <figure>
+      <%= image_tag listing.photo.url(:medium) %>
+      <figcaption><%= link_to listing.title, listing_path(listing) %></figcaption>
+    </figure>
   <% end %>
-</ul>
+</div>
