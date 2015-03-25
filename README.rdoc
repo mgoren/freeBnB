@@ -1,0 +1,48 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+
+
+== User Stories
+
+"As a [role], I want [feature], so that [benefit]."
+
+* As a user I want to be able to create an account, so that I can log in
+* As a user I want to be able to visit my profile page, so that I can edit my profile
+* As a user I want to be able to post a listing, so that I can invite people to stay at my place
+* As a user I want to be able to visit a listing page, so that I can see more details
+* As a user I want to be able to search listings, so that I can find a place to stay
+
+
+* As a user I want to be able to visit a listing page, so that I can leave feedback
+* As a user I want to be able to visit other people's profile pages, so that I can leave feedback
+* As a user I want to be able to request a stay at a place, so that I can initiate contact with its owner
+* As a user I want to be able to message a user who has requested a stay, so that I can ask for more details
+* As a user I want to be able to visit my inbox, so that I can see my messages
+* As a user I want to be able to approve or reject a request, so that I can feel safe
