@@ -1,3 +1,7 @@
+<% @listing.user.name = nil if @listing.user.name == "" %>
+
+<%= image_tag @listing.photo.url %>
+
 <h1><%= @listing.title %> by <%= @listing.user.name ? @listing.user.name : @listing.user.email %></h1>
 <h2><%= @listing.location %></h2>
 

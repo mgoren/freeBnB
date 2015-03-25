@@ -40,13 +40,13 @@ before_filter :authenticate_user!, except: [:index, :show]
         redirect_to listing_path(@listing)
       else
         flash[:error] = "Listing not updated. ):"
-        redirect_to :edit
+        redirect_to edit_listing_path(@listing)
       end
     end
   end
 
 private
   def listing_params
-    params.require(:listing).permit(:title, :description, :location)
+    params.require(:listing).permit(:title, :description, :location, :photo)
   end
 end

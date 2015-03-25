@@ -14,6 +14,8 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 gem 'bootswatch-rails'
 gem 'devise'
+gem 'textacular', '~> 3.0'
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 
 group :development, :test do
   gem 'byebug'

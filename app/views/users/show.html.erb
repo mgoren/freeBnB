@@ -7,6 +7,14 @@
 <% if @user.name %>
   <h3><%= @user.name %></h3>
 <% end %>
-<% if @user.bio %>
+<% if @user.bio && @user.bio != "" %>
   <p class="well"><%= @user.bio %></p>
+<% end %>
+
+<% if @user.listings.any? %>
+  <ul class="list-unstyled">
+    <% @user.listings.each do |listing| %>
+      <li><%= link_to listing.title, listing_path(listing) %></li>
+    <% end %>
+  </ul>
 <% end %>

@@ -24,7 +24,7 @@ before_filter :authenticate_user!, except: [:index, :show]
         redirect_to user_path(@user)
       else
         flash[:error] = "Profile not updated!"
-        redirect_to :edit
+        redirect_to edit_user_path(@user)
       end
     end
   end
