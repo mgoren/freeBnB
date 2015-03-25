@@ -45,6 +45,13 @@ before_filter :authenticate_user!, except: [:index, :show]
     end
   end
 
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+    flash[:notice] = "Listing deleted."
+    redirect_to user_path(@listing.user)
+  end
+
 private
   def listing_params
     params.require(:listing).permit(:title, :description, :location, :photo)

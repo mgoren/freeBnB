@@ -39,6 +39,8 @@ Please feel free to use a different markup language if you do not plan to run
 * As a user I want to be able to post a listing, so that I can invite people to stay at my place (done)
 * As a user I want to be able to visit a listing page, so that I can see more details (done)
 * As a user I want to be able to visit my listing's page, so that I can edit its details(done)
+* As a user I want to be able to add images to listings, so that I can show off my place (done)
+* As a user I want to be able to click 'edit account', so that I can cancel my account (done)
 * As a user I want to be able to search listings, so that I can find a place to stay
 
 
