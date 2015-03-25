@@ -1,0 +1,8 @@
+<h1><%= @user.email %>'s profile</h1>
+<%= link_to "edit profile", edit_user_path(@user) %>
+<% if @user.name %>
+  <h3><%= @user.name %></h3>
+<% end %>
+<% if @user.bio %>
+  <p class="well"><%= @user.bio %></p>
+<% end %>

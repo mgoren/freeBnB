@@ -1,0 +1,13 @@
+<%= bootstrap_form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_area :bio %>
+  </div>
+
+  <%= f.submit 'Update profile', class: "btn btn-success" %>
+
+
+<% end %>

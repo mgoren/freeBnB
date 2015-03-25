@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'user#index'
+  devise_for :users
+  root to: 'users#index'
 
-  resources :user
+  resources :users, only: [:index, :show, :edit, :update]
+  resources :listings
 end
