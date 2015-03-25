@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-
+    @users = User.all
   end
 
   def show
@@ -14,12 +15,17 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      flash[:notice] = "Profile updated."
+    unless @user == current_user
+      flash[:error] = "You cannot edit another user's profile!"
       redirect_to user_path(@user)
     else
-      flash[:error] = "Profile not updated!"
-      redirect_to :edit
+      if @user.update(user_params)
+        flash[:notice] = "Profile updated."
+        redirect_to user_path(@user)
+      else
+        flash[:error] = "Profile not updated!"
+        redirect_to :edit
+      end
     end
   end
 

@@ -1,0 +1,7 @@
+<h1><%= @listing.title %> by <%= @listing.user.name ? @listing.user.name : @listing.user.email %></h1>
+<h2><%= @listing.location %></h2>
+
+<% if @listing.user == current_user %>
+  <%= link_to "edit listing", edit_listing_path(@listing) %>
+<% end %>
+<p class="well"><%= @listing.description %></p>

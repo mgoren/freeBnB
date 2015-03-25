@@ -52,6 +52,16 @@ describe 'visiting user profile' do
     expect(page).to have_content "edit profile page"
   end
 
+  it "will not allow a logged in user to edit someone else's profile" do
+    user = FactoryGirl.create(:user)
+    user2 = FactoryGirl.create(:user, email: 'foo@me.com')
+    user2.update(id: 2)
+    login(user)
+    click_link 'Users'
+    click_link user2.email
+    expect(page).to have_no_content "edit profile"
+  end
+
   it "will allow a logged in user to input profile info" do
     user = FactoryGirl.create(:user)
     login(user)
