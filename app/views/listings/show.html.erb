@@ -1,12 +1,15 @@
 <% @listing.user.name = nil if @listing.user.name == "" %>
 
+<div>
+  Posted by: <%= link_to @listing.user.name ? @listing.user.name : @listing.user.email, user_path(@listing.user) %></h1>
+
+  <% if @listing.user == current_user %>
+    | <%= link_to "edit listing", edit_listing_path(@listing) %>
+  <% end %>
+</div>
+
 <%= image_tag @listing.photo.url(:medium) %>
 
 <h1><%= @listing.title %></h1>
 <h2>Location: <%= @listing.location %></h2>
-Posted by: <%= link_to @listing.user.name ? @listing.user.name : @listing.user.email, user_path(@listing.user) %></h1>
-
-<% if @listing.user == current_user %>
-  | <%= link_to "edit listing", edit_listing_path(@listing) %>
-<% end %>
 <p class="well"><%= @listing.description %></p>

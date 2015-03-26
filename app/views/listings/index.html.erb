@@ -1,7 +1,7 @@
 <div id="listings-display">
   <% @listings.each do |listing| %>
     <figure>
-      <%= image_tag listing.photo.url(:medium) %>
+      <%= link_to image_tag(listing.photo.url(:medium)), listing_path(listing) %>
       <figcaption><%= link_to listing.title, listing_path(listing) %></figcaption>
     </figure>
   <% end %>

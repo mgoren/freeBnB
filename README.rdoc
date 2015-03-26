@@ -31,8 +31,6 @@ Please feel free to use a different markup language if you do not plan to run
 
 == User Stories
 
-"As a [role], I want [feature], so that [benefit]."
-
 * As a user I want to be able to create an account, so that I can log in (done)
 * As a user I want to be able to log in, so that I can do things (done)
 * As a user I want to be able to visit my profile page, so that I can edit my profile (done)
