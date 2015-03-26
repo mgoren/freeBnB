@@ -1,5 +1,9 @@
 class NotificationsController < ApplicationController
 
+  def index
+    @foo = "foo"
+  end
+
   def new
     @user = User.find(params[:user_id])
     @notification = Notification.new

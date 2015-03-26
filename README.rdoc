@@ -40,8 +40,8 @@ Please feel free to use a different markup language if you do not plan to run
 * As a user I want to be able to add images to listings, so that I can show off my place (done)
 * As a user I want to be able to click 'edit account', so that I can cancel my account (done)
 
-* As a user I want to be able to request a stay at a place, so that I can initiate contact with its owner
-* As a user I want to receive a notification when someone sends a request, so that I can respond
+* As a user I want to be able to request a stay at a place, so that I can initiate contact with its owner (done)
+* As a user I want to receive a notification when someone sends a request, so that I can respond (done-ish)
 * As a user I want to be able to search listings, so that I can find a place to stay
 
 * As a user I want to be able to message a user who has requested a stay, so that I can ask for more details

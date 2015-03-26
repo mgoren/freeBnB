@@ -3,6 +3,9 @@ before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @listings = Listing.all
+    if params.has_key?(:query) && params.fetch("query") != nil && params.fetch("query") != ""
+      @listings = Listing.search(params.fetch("query"))
+    end
   end
 
   def show
