@@ -13,3 +13,5 @@
 <h1><%= @listing.title %></h1>
 <h2>Location: <%= @listing.location %></h2>
 <p class="well"><%= @listing.description %></p>
+
+<%= link_to "Request a Stay", new_user_notification_path(@listing.user), class: "btn btn-info" %>

@@ -1,0 +1,6 @@
+<h3>Send a request to <%= @user.email %></h3>
+<%= bootstrap_form_for [@user, @notification] do |f| %>
+<%= f.text_field :title %>
+<%= f.text_area :body %>
+<%= f.submit 'Send Request' %>
+<% end %>

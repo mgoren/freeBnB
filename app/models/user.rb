@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :listings
+  has_many :notifications
+  has_many :requesters, class_name: "User", through: :notifications
   # validates :name, presence: true, on: :update
 
 
