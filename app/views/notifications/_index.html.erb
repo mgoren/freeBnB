@@ -1,0 +1,5 @@
+<ul class="dropdown-menu" role="menu">
+  <% current_user.notifications.each do |notification| %>
+    <li class="notification" data-title="<%= notification.title %>" data-body="<%= notification.body %>" data-requester="<%= notification.requester.email %>"><a href="#"><%= notification.title %></a></li>
+  <% end %>
+</ul>
