@@ -1,0 +1,7 @@
+<ul class="dropdown-menu" role="menu">
+  <% current_user.notifications.reverse[0,5].each do |notification| %>
+    <li>
+      <%= link_to notification.title, user_notification_path(current_user, notification) %>
+    </li>
+  <% end %>
+</ul>

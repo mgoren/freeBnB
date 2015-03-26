@@ -17,6 +17,18 @@
 @import "bootswatch/cosmo/variables";
 @import "bootstrap";
 
+
+a {color:black;}
+a:hover {color:black;}
+
+.badge-warning {
+  background-color: #d58512;
+}
+
+#request-stay-view {
+  display: none;
+}
+
 body {
   background-color: #FFF8E8;
 }
@@ -24,9 +36,7 @@ body {
 #listings-display {
 
   figure {
-    width: 300px;
-    height: 300px;
-    display: inline-table;
+    display: inline-block;
     margin: 20px;
   }
 

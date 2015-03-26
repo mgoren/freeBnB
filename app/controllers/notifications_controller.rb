@@ -1,7 +1,15 @@
 class NotificationsController < ApplicationController
 
   def index
-    @foo = "foo"
+    @user = User.find(params[:user_id])
+    @notifications = @user.notifications
+  end
+
+  def show
+    @notification = Notification.find(params[:id])
+    @notification.read = true
+    @notification.save
+    render 'index'
   end
 
   def new
@@ -11,8 +19,10 @@ class NotificationsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
+    @listing =
     notification = @user.notifications.new(notification_params)
     notification.requester = current_user
+    notification.read = false
     if notification.save
       flash[:notice] = "Your request was sent!"
       redirect_to user_path(@user)
@@ -24,7 +34,7 @@ class NotificationsController < ApplicationController
 
 private
   def notification_params
-    params.require(:notification).permit(:title, :body)
+    params.require(:notification).permit(:title, :body, :listing_id)
   end
 
 end

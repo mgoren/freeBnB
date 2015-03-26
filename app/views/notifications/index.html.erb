@@ -1,10 +1,15 @@
-<ul class="dropdown-menu" role="menu">
+<ul class="list-unstyled list-group">
   <% current_user.notifications.each do |notification| %>
-    <li class="notification" data-title="<%= notification.title %>" data-body="<%= notification.body %>" data-requester="<%= notification.requester.email %>"><a href="#"><%= notification.title %></a></li>
-  <% end %>
-  <% if @foo %>
-    <li>FOO</li>
+    <li class="list-group-item">
+      <%= link_to notification.title, user_notification_path(current_user, notification) %> 
+      <% if notification.read %>
+        <span class="glyphicon glyphicon-check"></span>
+      <% else %>
+      <span class="glyphicon glyphicon-unchecked"></span>
+      <% end %>
+    </li>
   <% end %>
 </ul>
 
-<%= render 'layouts/notification_modal' %>
+
+<%= render 'notification_modal' %>

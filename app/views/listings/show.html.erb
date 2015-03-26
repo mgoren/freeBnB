@@ -14,4 +14,21 @@
 <h2>Location: <%= @listing.location %></h2>
 <p class="well"><%= @listing.description %></p>
 
-<%= link_to "Request a Stay", new_user_notification_path(@listing.user), class: "btn btn-info" %>
+<button class="btn btn-info" id="request-stay">Request a Stay</button>
+
+<div id="request-stay-view">
+  <h3>Send a request to <%= @listing.user.email %></h3>
+  <%= bootstrap_form_for [@listing.user, Notification.new] do |f| %>
+
+  <%= f.hidden_field :listing_id, value: @listing.id %>
+  <%= f.text_field :title %>
+  <%= f.text_area :body %>
+  <%= f.submit 'Send Request' %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $("#request-stay").click(function() {
+    $("#request-stay-view").toggle();
+  });
+</script>

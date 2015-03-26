@@ -42,10 +42,10 @@ Please feel free to use a different markup language if you do not plan to run
 
 * As a user I want to be able to request a stay at a place, so that I can initiate contact with its owner (done)
 * As a user I want to receive a notification when someone sends a request, so that I can respond (done-ish)
-* As a user I want to be able to search listings, so that I can find a place to stay
+* As a user I want to be able to search listings, so that I can find a place to stay (done)
+* As a user I want to be able to visit my inbox, so that I can see my messages (done)
 
 * As a user I want to be able to message a user who has requested a stay, so that I can ask for more details
 * As a user I want to be able to visit a listing page, so that I can leave feedback
 * As a user I want to be able to visit other people's profile pages, so that I can leave feedback
-* As a user I want to be able to visit my inbox, so that I can see my messages
 * As a user I want to be able to approve or reject a request, so that I can feel safe

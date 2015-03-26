@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_many :requesters, class_name: "User", through: :notifications
   # validates :name, presence: true, on: :update
 
+  def notifications_count
+    self.notifications.where(read: false).count
+  end
 
 
 end
